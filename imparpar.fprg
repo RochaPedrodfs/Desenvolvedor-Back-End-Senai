@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="DevBackEnd2s24"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-07-27 12:56:16 "/>
+        <attribute name="created" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODU7MjAyNC0wNy0yNzsiMTI6Mzc6MTEgIjszMTkw"/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODU7MjAyNC0wNy0yNzsiMTI6NTY6MTYgIjsyOzMzMDU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num" type="Real" array="False" size=""/>
+            <output expression="&quot;digite um n&#250;mero:&quot;" newline="True"/>
+            <input variable="num"/>
+            <if expression="num%2==0">
+                <then>
+                    <output expression="&quot;numero par&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;numero impar&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

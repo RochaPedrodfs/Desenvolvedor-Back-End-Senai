@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="dezAlturas"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-10 06:26:41 "/>
+        <attribute name="created" value="VXNlcjtERUxMOzIwMjQtMDgtMDg7IjA4OjI5OjAwICI7MTkwMg=="/>
+        <attribute name="edited" value="VXNlcjtERUxMOzIwMjQtMDgtMTA7IjA2OjI2OjQxICI7MzsyMDA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ALGORITMO QUE LEIA A ALTURA DE 10 PESSOAS, EM SEGUIDA APRESENTE A MAIOR E MENOR ALTURA E A M&#201;DIA DE ALTURA."/>
+            <declare name="cont" type="Integer" array="False" size=""/>
+            <declare name="soma, media, altura, maior, menor" type="Real" array="False" size=""/>
+            <assign variable="media" expression="0"/>
+            <assign variable="soma" expression="0"/>
+            <comment text="Foram criados as vari&#225;veis necess&#225;rias para aplica&#231;&#227;o do c&#243;digo.&#13;&#10;Temos a vari&#225;vel &quot;cont&quot; que &#233; do tipo inteiro, que dara in&#237;cio ao contador.&#13;&#10;Temos as demais vari&#225;veis que s&#227;o do tipo Real, v&#227;o receber n&#250;meros do tipo Float."/>
+            <comment text="&#201; inserido o comando FOR com o contador de 1 at&#233; 10"/>
+            <for variable="cont" start="1" end="10" direction="inc" step="1">
+                <comment text="Damos &#237;nicio ao c&#243;digo perguntando a idade do usu&#225;rio, repetindo por dez vezes porque j&#225; esta dentro do comando &quot;FOR&quot; "/>
+                <output expression="&quot;Digite sua altura: &quot;" newline="True"/>
+                <input variable="altura"/>
+                <comment text="Aqui &#233; realizado o registro das 10 alturas"/>
+                <if expression="cont==1">
+                    <then>
+                        <comment text="Verificando a primeira condi&#231;&#227;o dentro do looping, por ser o primeiro registro, a primeira altura ser&#225; registrada como maior e menor"/>
+                        <assign variable="menor" expression="altura"/>
+                        <assign variable="maior" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="altura&lt;=menor">
+                    <then>
+                        <comment text="ap&#243;s registro da primeira altura maior e menor, o c&#243;digo ir&#225; verificar para as demais alturas se a altura &#233; menor&#13;&#10;"/>
+                        <assign variable="menor" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <if expression="altura&gt;=maior">
+                    <then>
+                        <comment text="Nesse ponto &#233; verificado se a altura e maior"/>
+                        <assign variable="maior" expression="altura"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="soma" expression="soma+altura"/>
+                <comment text="Realizado a soma de todas as alturas"/>
+            </for>
+            <comment text="finalizado o contador"/>
+            <assign variable="media" expression="soma/10"/>
+            <comment text="temos o resultado de todas as alturas somadas e divididas pela quantidade de alturas, tendo assim o resultado da media"/>
+            <output expression="&quot;O Valor m&#233;dio &#233; de &quot;&amp;media" newline="True"/>
+            <comment text="Aqui &#233; escrito o valor da m&#233;dia para o usu&#225;rio"/>
+            <output expression="&quot;O maior valor &#233; de &quot;&amp;maior" newline="True"/>
+            <comment text="aqui &#233; escrito o valor da maior altura para o usu&#225;rio"/>
+            <output expression="&quot;O menor valor &#233; de &quot;&amp;menor" newline="True"/>
+            <comment text="aqui &#233; escrito a menor altura para o usu&#225;rio"/>
+        </body>
+    </function>
+</flowgorithm>

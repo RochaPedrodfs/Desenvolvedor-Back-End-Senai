@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ex_10_pares (1)"/>
+        <attribute name="authors" value="NOte"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-10 06:32:25 "/>
+        <attribute name="created" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDc6NTk6MzkgIjsyNjYw"/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDg6NDY6MzggIjsxOzI3NjQ="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMTE6MDI6MzUgIjsxOzMyOTE="/>
+        <attribute name="edited" value="VXNlcjtERUxMOzIwMjQtMDgtMTA7IjA2OjMyOjI1ICI7MjsyMDAz"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ALGORITMO QUE APRESENTE OS 10 PRIMEIROS N&#218;MEROS PARES "/>
+            <declare name="num, cont" type="Integer" array="False" size=""/>
+            <comment text="Inic&#237;amos a vari&#225;vel num com o n&#250;mero 0"/>
+            <assign variable="num" expression="0"/>
+            <comment text="inic&#237;amos a vari&#225;vel cont com o n&#250;mero 0"/>
+            <assign variable="cont" expression="0"/>
+            <comment text="contador &#233; utilizado para gerar o looping, nesse caso ele vai de 0 &#225; 10"/>
+            <while expression="cont &lt; 10">
+                <comment text="dentro do la&#231;o de repeti&#231;&#227;o, criamos a condi&#231;&#227;o atrav&#233;s do modulo para ver se o n&#250;mero &#233; par ou impar"/>
+                <if expression="num%2==0">
+                    <then>
+                        <output expression="num" newline="True"/>
+                        <assign variable="cont" expression="cont +1"/>
+                        <comment text="Necess&#225;rio incrementar o contador"/>
+                    </then>
+                    <else/>
+                </if>
+                <comment text="ap&#243;s sair do &quot;se&quot; incrementar o n&#250;mero iniciado "/>
+                <assign variable="num" expression="num + 1"/>
+            </while>
+            <comment text="J&#225; finalizado o looping"/>
+        </body>
+    </function>
+</flowgorithm>

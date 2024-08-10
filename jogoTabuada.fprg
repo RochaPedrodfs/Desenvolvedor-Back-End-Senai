@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="ex_jogo"/>
+        <attribute name="authors" value="NOte"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-08-10 06:34:18 "/>
+        <attribute name="created" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDk6MTI6MzcgIjsyNjQ5"/>
+        <attribute name="edited" value="Tk90ZTtERVNLVE9QLUhRR0NFNFU7MjAyNC0wNy0zMDsiMDk6NDU6MjAgIjsyOzI3NTY="/>
+        <attribute name="edited" value="RGV2QmFja0VuZDJzMjQ7RVNONTEyLTEyNDI5ODY7MjAyNC0wOC0wMzsiMDI6MTk6NDIgIjszOzMyOTk="/>
+        <attribute name="edited" value="VXNlcjtERUxMOzIwMjQtMDgtMTA7IjA2OjM0OjE4ICI7NDsyMDA5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="ALGORITMO EM FORMA DE JOGO. APRESENTE UMA TABUADA AO USU&#193;RIO, O USU&#193;RIO DEVE DIGITAR O RESULTADO CORRETO DA TABUADA, CASO ERRE, O JOGO FINALIZA."/>
+            <declare name="num1, resultado, contador" type="Integer" array="False" size=""/>
+            <comment text="A vari&#225;vel num1 ser&#225; respons&#225;vel em armazenar o n&#250;mero inteiro que o usu&#225;rio informar.&#13;&#10;A vari&#225;vel resultado ser&#225; respons&#225;vel em armazenar o resultado da multiplica&#231;&#227;o do num1*contador"/>
+            <assign variable="contador" expression="0"/>
+            <output expression="&quot;Informe qual tabuada deseja praticar:&quot;" newline="True"/>
+            <input variable="contador"/>
+            <assign variable="num1" expression="0"/>
+            <do expression="resultado =num1*contador and num1 &lt;10">
+                <assign variable="num1" expression="num1+1"/>
+                <output expression="&quot;Quanto &#233; &quot;&amp;contador&amp;&quot; x&quot; &amp;num1&amp; &quot;?&quot;" newline="True"/>
+                <input variable="resultado"/>
+                <comment text="O looping ser&#225; executado at&#233; que ocorra um erro ou alcance as dez repeti&#231;oes"/>
+            </do>
+            <if expression="num1&gt;=10">
+                <then>
+                    <output expression="&quot;Parab&#233;ns voc&#234; ganhou o jogo&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Que pena, tente novamente!&quot;" newline="True"/>
+                </else>
+            </if>
+            <output expression="&quot;Acabou o jogo&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
